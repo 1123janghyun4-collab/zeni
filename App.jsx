@@ -3,25 +3,28 @@ import { QueryClientProvider } from '@tanstack/react-query';
 import { queryClientInstance } from '@/lib/query-client';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 
-import PageNotFound from '@/lib/zeni/PageNotFound';
+// 실제 lib 위치에 맞춤
+import PageNotFound from '@/lib/PageNotFound';
 import { AuthProvider, useAuth } from '@/lib/AuthContext';
+
+// 실제 components 위치에 맞춤
 import UserNotRegisteredError from '@/components/UserNotRegisteredError';
 import ProtectedRoute from '@/components/ProtectedRoute';
-import ScrollToTop from '@/components/zeni/ScrollToTop';
+import ScrollToTop from '@/components/ScrollToTop';
 
-// pages 경로 (zeni 폴더 구조 반영)
-import Home from '@/pages/zeni/Home';
-import ProjectDetail from '@/pages/zeni/ProjectDetail';
-import MyPage from '@/pages/zeni/MyPage';
-import MyRecords from '@/pages/zeni/MyRecords';
-import ArchiveEditor from '@/pages/zeni/ArchiveEditor';
-import BlogEditor from '@/pages/zeni/BlogEditor';
-import WriteChoice from '@/pages/zeni/WriteChoice';
-import Legal from '@/pages/zeni/Legal';
-import Login from '@/pages/zeni/Login';
-import Register from '@/pages/zeni/Register';
-import ForgotPassword from '@/pages/zeni/ForgotPassword';
-import ResetPassword from '@/pages/zeni/ResetPassword';
+// 실제 pages 위치에 맞춤 (pages 폴더 하위)
+import Home from '@/pages/Home';
+import ProjectDetail from '@/pages/ProjectDetail';
+import MyPage from '@/pages/MyPage';
+import MyRecords from '@/pages/MyRecords';
+import ArchiveEditor from '@/pages/ArchiveEditor';
+import BlogEditor from '@/pages/BlogEditor';
+import WriteChoice from '@/pages/WriteChoice';
+import Legal from '@/pages/Legal';
+import Login from '@/pages/Login';
+import Register from '@/pages/Register';
+import ForgotPassword from '@/pages/ForgotPassword';
+import ResetPassword from '@/pages/ResetPassword';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
